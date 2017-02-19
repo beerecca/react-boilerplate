@@ -1,4 +1,4 @@
-module.exports = function (wallaby) {
+module.exports = function(wallaby) {
   return {
     files: [
       'src/**/*.js',
@@ -9,12 +9,12 @@ module.exports = function (wallaby) {
       'src/**/*.test.js'
     ],
 
-    bootstrap: function (wallaby) {
+    bootstrap: function(wallaby) {
       wallaby.testFramework.configure({
         //Stub any imported non-tested files
         'moduleNameMapper': {
-          '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': require('path').join(wallaby.localProjectDir, 'config', 'mocks', 'file-mock.js'),
-          '\\.(css|less|scss)$': require('path').join(wallaby.localProjectDir, 'config', 'mocks', 'style-mock.js')
+          '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': require('path').join(wallaby.localProjectDir, 'src', 'mocks', 'file-mock.js'),
+          '\\.(css|less|scss)$': require('path').join(wallaby.localProjectDir, 'src', 'mocks', 'style-mock.js')
         }
       })
     },

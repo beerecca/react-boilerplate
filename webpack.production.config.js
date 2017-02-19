@@ -7,12 +7,12 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 rules.push({
   test: /[\/\\](node_modules|global)[\/\\].*\.css$/,
-  use: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})
+  use: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
 });
 
 rules.push({
   test: /[\/\\]src[\/\\].*\.scss/,
-  use: ExtractTextPlugin.extract({fallback: "style-loader", use: ["css-loader", "sass-loader"]})
+  use: ExtractTextPlugin.extract({fallback: 'style-loader', use: ['css-loader', 'sass-loader']})
 });
 
 module.exports = {

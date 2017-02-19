@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 const webpack = require('webpack');
 const path = require('path');
 const rules = require('./webpack.rules');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const HOST = process.env.HOST || "127.0.0.1";
-const PORT = process.env.PORT || "8888";
+const HOST = process.env.HOST || '127.0.0.1';
+const PORT = process.env.PORT || '8888';
 
 //Allows inclusion of css files from node_modules folder, eg normalize.css
 //Not including ExtractTextPlugin in dev config to allow for hot module reloading of styles
@@ -21,7 +21,7 @@ rules.push({
 
 rules.push({
   test: /\.js$/,
-  enforce: "pre",
+  enforce: 'pre',
   exclude: ['node_modules', 'bower_components'],
   loader: 'eslint-loader'
 });
@@ -40,10 +40,10 @@ module.exports = {
     rules: rules
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase: './dist',
     //Do not print bundle build stats to console
     noInfo: true,
-    clientLogLevel: "none",
+    clientLogLevel: 'none',
     //Gzip assets
     compress: true,
     //Enable hot module reloading

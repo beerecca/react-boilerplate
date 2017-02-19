@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "globals": {
     "console": false,
@@ -10,6 +11,11 @@
   },
   "extends": "eslint:recommended",
   "rules": {
+    "arrow-parens": ["error", "always"],
+    "quotes": ["error", "single"],
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "space-before-function-paren": ["error", "never"],
+    "eol-last": ["error", "always"],
     "brace-style": [
       2,
       "1tbs",
@@ -24,7 +30,6 @@
     ],
     "consistent-return": 0,
     "dot-notation": 0,
-    "eol-last": 0,
     "key-spacing": 0,
     "new-cap": 0,
     "no-console": 0,
@@ -51,10 +56,6 @@
     "one-var": [
       2,
       "never"
-    ],
-    "quotes": [
-      2,
-      "single"
     ],
     "valid-jsdoc": [
       1,
