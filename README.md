@@ -24,6 +24,12 @@ Tests use Jest and Enzyme. There is also configuration for [wallaby.js](https://
 ```
 yarn test
 ```
+### Linting
+Run ESLint:
+
+```
+yarn lint
+```
 
 ### Build production package
 
