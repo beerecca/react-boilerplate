@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import HomePage from '../HomePage';
+//Test the component only, without connected Redux state
+import {HomePage} from '../HomePage';
 import Loading from '../../../components/Loading/Loading';
 
 describe('HomePage', () => {

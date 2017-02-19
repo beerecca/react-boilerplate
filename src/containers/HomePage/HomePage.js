@@ -1,7 +1,13 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux'
+import { getList } from '../../actions/list-actions';
 import Loading from '../../components/Loading/Loading';
 
-class HomePage extends Component {
+export class HomePage extends Component {
+
+  componentDidMount() {
+    this.props.dispatch(getList());
+  }
 
   render() {
     const {isLoading} = this.props;
@@ -21,4 +27,11 @@ HomePage.propTypes = {
   isLoading: PropTypes.bool.isRequired
 };
 
-export default HomePage;
+const mapStateToProps = (state) =>  {
+  return {
+    isLoading: state.app.isLoading,
+    list: state.app.list
+  }
+};
+
+export default connect(mapStateToProps)(HomePage);
