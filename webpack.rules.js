@@ -2,16 +2,7 @@ module.exports = [
   {
     test: /\.js$/,
     exclude: /(node_modules|bower_components)/,
-    loader: 'react-hot-loader'
-  },
-  {
-    test: /\.js$/,
-    exclude: /(node_modules|bower_components)/,
-    loader: 'babel-loader',
-    options: {
-      presets: ['es2015', 'react'],
-      plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread'],
-    }
+    use: ['react-hot-loader', 'babel-loader']
   },
   {
     test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
